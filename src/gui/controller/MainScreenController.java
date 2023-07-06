@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 import objectclass.*;
+import othertools.StringHandler;
 import datahandle.DataHandler;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
@@ -156,10 +157,12 @@ public class MainScreenController implements Initializable{
     private DataHandler dataHandler;
     private Task<Void> crawlingTask;
     private Thread crawlingThread;
+    private StringHandler stringHandler;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        stringHandler = new StringHandler();
         dataHandler = new DataHandler();
 
         listviewCrawledData.setItems(dataHandler.getCrawler().getDataList());
@@ -223,6 +226,7 @@ public class MainScreenController implements Initializable{
 
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                setDataList();
                 searchData(newValue);
             }
             
@@ -284,11 +288,15 @@ public class MainScreenController implements Initializable{
     }
 
     private void searchData(String searchKey) {
-        searchKey = searchKey.toLowerCase();
-        filterList.clear();
-        for(Historical object : dataHandler.getDataList()) {
-            if((!object.getName().isEmpty() &&object.getName().toLowerCase().contains(searchKey)) || (!object.getDetail().isEmpty() && object.getDetail().toLowerCase().contains(searchKey)) || (!object.getRelativeKeyWord().isEmpty() && object.getRelativeKeyWord().toLowerCase().contains(searchKey)))
-                filterList.add(object);         
+        searchKey = stringHandler.normalize(searchKey);
+        int i = 0;
+        Historical tmp;
+        while(i<filterList.size()) {
+            tmp = filterList.get(i);
+            if(!stringHandler.normalize(tmp.getName()).contains(searchKey))
+                filterList.remove(tmp);
+            else
+                i++;
         }
     }
 
