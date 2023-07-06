@@ -33,10 +33,7 @@ import javafx.scene.text.Text;
 public class MainScreenController implements Initializable{
 
     @FXML
-    private ProgressIndicator animLoading;
-
-    @FXML
-    private Label ibPageCount;
+    private Label lbPageCount;
 
     @FXML
     private Label lbName;
@@ -77,12 +74,15 @@ public class MainScreenController implements Initializable{
     @FXML
     private VBox boxLink;
 
+    @FXML
+    private VBox boxMain;
+
     @FXML 
     private Label lbRelation;
 
     @FXML
     void sortData(ActionEvent event) {
-        
+
     }
 
     @FXML
@@ -105,10 +105,10 @@ public class MainScreenController implements Initializable{
 
     @FXML
     void btnCrawlTriggerPressed(ActionEvent event) {
-            btnCrawlTrigger.setDisable(true);
-            lbCrawlUpdate.setText("Crawling...");
-            animCrawling.setVisible(true);
-            crawlingThread.start();
+        btnCrawlTrigger.setDisable(true);
+        lbCrawlUpdate.setText("Crawling...");
+        animCrawling.setVisible(true);
+        crawlingThread.start();
     }
 
     @FXML
@@ -118,9 +118,23 @@ public class MainScreenController implements Initializable{
 
     @FXML
     void importDataFromFile(ActionEvent event) {
-        dataHandler.getImporter().importData();
-        dataHandler.useImportedData();
-        setDataList();
+        boxMain.setVisible(false);
+        Task<Void> newThreadTask = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                dataHandler.getImporter().importData();
+                dataHandler.useImportedData();
+                Platform.runLater(() ->{
+                    setDataList();
+                    lbPageCount.setText("" +filterList.size());
+                    boxMain.setVisible(true);
+                });
+                return null;
+            } 
+        };
+        Thread thread = new Thread(newThreadTask);
+        thread.setDaemon(true);
+        thread.start();
     }
 
     @FXML
@@ -167,14 +181,32 @@ public class MainScreenController implements Initializable{
     private ObservableList<Historical> filterList;
     private DataHandler dataHandler;
     private Task<Void> crawlingTask;
+    private Task<Void> importTask;
     private Thread crawlingThread;
+    private Thread importThread;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        dataHandler = new DataHandler();
+        boxMain.setVisible(false);
+        filterList = FXCollections.observableArrayList();
+        importTask = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                dataHandler = new DataHandler();
+                dataHandler.useImportedData();
+                Platform.runLater(() ->{
+                    listviewCrawledData.setItems(dataHandler.getCrawler().getDataList());
+                    setDataList();
+                    lbPageCount.setText("" +filterList.size());
+                    boxMain.setVisible(true);
+                });
+                return null;
+            }
+        };
 
-        listviewCrawledData.setItems(dataHandler.getCrawler().getDataList());
+        importThread = new Thread(importTask);
+        importThread.setDaemon(true);
 
         listviewCrawledData.setCellFactory(param -> new ListCell<Historical>() {
             @Override
@@ -187,14 +219,6 @@ public class MainScreenController implements Initializable{
                 }
             }
         });
-
-        lbCrawlUpdate.setText("Crawl Data");
-        animCrawling.setVisible(false);
-
-        mbType.setText("Tất cả");
-        filterList = FXCollections.observableArrayList();
-        dataHandler.useImportedData();
-        setDataList();
 
         listviewData.setCellFactory(param -> new ListCell<Historical>() {
         
@@ -214,6 +238,7 @@ public class MainScreenController implements Initializable{
 
         listviewData.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             setContent(newValue);
+            lbPageCount.setText((filterList.indexOf(newValue)+1) + "/" + filterList.size());
         });
 
         crawlingTask = new Task<Void>() {
@@ -240,6 +265,9 @@ public class MainScreenController implements Initializable{
             }
             
         });
+    
+        importThread.start();
+
     }
 
     private void setContent(Historical obj) {
@@ -291,6 +319,9 @@ public class MainScreenController implements Initializable{
                 filterList.clear();
                 filterList.addAll(dataHandler.getWars());
             }
+            searchData(tfSearchBar.getText());
+            lbPageCount.setText("" + filterList.size());
+
         } catch (NullPointerException e) {
             setContent(listviewData.getSelectionModel().getSelectedItem());
         }
@@ -307,6 +338,7 @@ public class MainScreenController implements Initializable{
             else
                 i++;
         }
+        lbPageCount.setText("" + filterList.size());
     }
 
     public DataHandler getDataHandler() {

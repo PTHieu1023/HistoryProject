@@ -132,7 +132,6 @@ public class Importer {
     }
 
     private String readJsonFile(String path) {
-
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(path), StandardCharsets.UTF_8))) {
             StringBuilder sb = new StringBuilder();
             String line;
@@ -146,4 +145,5 @@ public class Importer {
             return "";
         }
     }
+
 }
