@@ -1,0 +1,69 @@
+.root {
+    -fx-background-image: url("../image/bg2.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
+.menu-type-select {
+    -fx-border-width: 5px;
+    -fx-background-radius: 25px;
+}
+
+.search-bar {
+    -fx-border-radius: 50%;
+    -fx-border-style: solid;
+    -fx-border-width: 5px;
+    -fx-background-radius: 25px;
+}
+
+.data-list-view {
+    -fx-border-radius: 5px;
+    -fx-border-width: 5px;
+    -fx-background-radius: 8px;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-viewport-border: none;
+    -fx-effect: none;
+}
+
+.list-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+}
+
+.brown-bg {
+   -fx-background-color: #820000; 
+}
+
+.brown-border{
+    -fx-border-color: #820000;
+}
+
+.light-bg {
+    -fx-background-color: #F2DEBA;
+}
+
+.light-border{
+    -fx-border-color: #F2DEBA;
+}
+
+.menu-bar{
+    -fx-text-fill: white;
+}
+
+.btn-menu{
+    
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+
+}
+
+.btn-link {
+    -fx-background-color: #F2DEBA;
+}
+
+.btn-link:hover {
+    -fx-text-fill: red;
+    -fx-underline: true;
+}

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="root" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Data">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#importDataFromFile" text="Import">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#crawlDataFromWeb" text="Crawl">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#saveData" text="Save">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu fx:id="View" mnemonicParsing="false" text="View">
+                  <items>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#viewDataFromFile" selected="true" text="Imported Data">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="viewMenuOption" />
+                           </toggleGroup>
+                           <accelerator>
+                              <KeyCodeCombination alt="DOWN" code="I" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </RadioMenuItem>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#viewDataFromWeb" text="Crawled Data" toggleGroup="$viewMenuOption">
+                           <accelerator>
+                              <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </RadioMenuItem>
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <top>
+                  <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Lịch sử Việt Nam" textFill="#820000">
+                           <font>
+                              <Font name="Comic Sans MS" size="60.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="60.0">
+                           <children>
+                              <MenuButton fx:id="mbType" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="168.0" stylesheets="@../style/Style.css" text="Thể loại" textAlignment="CENTER" textFill="WHITE">
+                                <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#showAllData" text="Tất cả" />
+                                  <MenuItem mnemonicParsing="false" onAction="#showDynasty" text="Thời kì" />
+                                  <MenuItem mnemonicParsing="false" onAction="#showCharacter" text="Nhân vật" />
+                                    <MenuItem mnemonicParsing="false" onAction="#showFestival" text="Lễ hội" />
+                                    <MenuItem mnemonicParsing="false" onAction="#showWar" text="Trận chiến" />
+                                    <MenuItem mnemonicParsing="false" onAction="#showLocation" text="Di tích" />
+                                </items>
+                                 <font>
+                                    <Font name="Comic Sans MS" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="menu-type-select" />
+                                    <String fx:value="brown-bg" />
+                                 </styleClass>
+                                 <padding>
+                                    <Insets left="25.0" />
+                                 </padding>
+                              </MenuButton>
+                              <TextField fx:id="tfSearchBar" prefHeight="45.0" prefWidth="710.0" promptText="Tìm kiếm" stylesheets="@../style/Style.css">
+                                 <font>
+                                    <Font name="Segoe UI" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="20.0" top="5.0" />
+                                 </padding>
+                                 <styleClass>
+                                    <String fx:value="search-bar" />
+                                    <String fx:value="brown-border" />
+                                 </styleClass>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="60.0" right="60.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="69.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </top>
+               <left>
+                  <ListView fx:id="listviewData" prefHeight="500.0" prefWidth="360.0" style="-fx-border-width: 5; -fx-border-radius: 5; -fx-background-radius: 10;" styleClass="brown-border" stylesheets="@../style/Style.css" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" />
+                     </BorderPane.margin>
+                  </ListView>
+               </left>
+               <center>
+                  <ScrollPane hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../style/Style.css" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="30.0" right="30.0" />
+                     </BorderPane.margin>
+                     <content>
+                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="492.0" prefWidth="741.0" style="-fx-background-radius: 2px;" styleClass="light-bg" stylesheets="@../style/Style.css">
+                           <children>
+                              <VBox layoutX="-8.0" layoutY="-3.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="590.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="lbName" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Welcome" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Bold" size="40.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="4.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label fx:id="lbType" alignment="CENTER" layoutX="10.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Hướng dẫn" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Italic" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Text fx:id="txDetail" lineSpacing="1.5" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="690.0">
+                                       <font>
+                                          <Font name="Serif Regular" size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Label fx:id="lbRelation" contentDisplay="CENTER" ellipsisString="" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Liên quan" underline="true" visible="false">
+                                       <font>
+                                          <Font name="Segoe UI Bold Italic" size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <VBox fx:id="boxLink">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" />
+                                       </VBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="15.0" left="25.0" right="15.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <styleClass>
+                        <String fx:value="data-list-view" />
+                        <String fx:value="brown-border" />
+                     </styleClass>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </children>
+      </VBox>
+      <VBox fx:id="crawlWindow" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-width: 5px; -fx-background-radius: 10px; -fx-border-radius: 5px; -fx-background-color: #eeeeee;" styleClass="brown-border" visible="false">
+         <StackPane.margin>
+            <Insets bottom="150.0" left="400.0" right="400.0" top="150.0" />
+         </StackPane.margin>
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#hideCrawlWindow" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #eeeeee;" textAlignment="JUSTIFY">
+               <VBox.margin>
+                  <Insets left="455.0" right="5.0" top="1.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+               <graphic>
+                  <Rectangle arcHeight="1.0" arcWidth="1.0" fill="#820000" height="4.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="15.0" />
+               </graphic>
+            </Button>
+            <Label fx:id="lbCrawlUpdate" text="Crawling" textFill="#820000">
+               <font>
+                  <Font name="Agency FB Bold" size="36.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="animCrawling" prefHeight="29.0" prefWidth="240.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </ProgressBar>
+            <HBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="385.0" prefWidth="490.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <ListView fx:id="listviewCrawledData" prefHeight="346.0" prefWidth="354.0">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </ListView>
+                  <VBox alignment="TOP_CENTER" fillWidth="false" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="btnCrawlTrigger" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnCrawlTriggerPressed" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: green;" text="Start" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
