@@ -3,6 +3,8 @@ package objectclass;
 import java.util.ArrayList;
 import java.util.List;
 
+import othertools.StringHandler;
+
 public class Historical {
     private String name;
     private String source;
@@ -69,12 +71,14 @@ public class Historical {
             return true;
         return false;
     }
+
     public void setRelation(Historical b) {
-        String connectKey = name + detail + relativeKeyWord;
-        connectKey = connectKey.toLowerCase();
-        if(connectKey.contains(b.getName().toLowerCase())) {
+        if(relativeKeyWord == null)
+            relativeKeyWord = StringHandler.normalize(name + detail);
+        if(relativeKeyWord.contains(StringHandler.normalize(b.getName()))) {
             addRelation(b);
             b.addRelation(this);
         }
     }
+
 }

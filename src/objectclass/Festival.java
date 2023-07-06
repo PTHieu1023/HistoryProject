@@ -25,4 +25,11 @@ public class Festival extends Historical {
 
         return info.toString();
     }
+
+    public Festival clone() { 
+        Festival clone = new Festival(super.getName(), super.getSource(), location, occurTime);
+        clone.setDetail(super.getDetail());
+        clone.setRelativeKeyWord(super.getRelativeKeyWord());
+        return clone;
+    }
 }

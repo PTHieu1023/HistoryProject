@@ -4,363 +4,415 @@
     "occurTime": "5/1",
     "name": "Lễ hội Đống Đa",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Nguyễn Huệ"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Nguyễn Huệ",
+    "relativeKeyWord": "lehoiongahttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhanoiquanonga51lehoitruyenthongvietnamcolienquanennguyenhue"
   },
   {
     "location": "Hà Nam, huyện Thanh Liêm",
     "occurTime": "5/1",
     "name": "Hội vật Liễu Đôi",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức tại làng Liễu Đôi. "
+    "detail": "Lễ hội truyền thống tổ chức tại làng Liễu Đôi. ",
+    "relativeKeyWord": "hoivatlieuoihttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhanamhuyenthanhliem51lehoitruyenthongtochuctailanglieuoi"
   },
   {
     "location": "Hà Nội, Sóc Sơn",
     "occurTime": "6/1",
     "name": "hội Gióng Sóc Sơn",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Thánh Gióng"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Thánh Gióng",
+    "relativeKeyWord": "hoigiongsocsonhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhanoisocson61lehoitruyenthongvietnamcolienquanenthanhgiong"
   },
   {
     "location": "Hà Nội, Đông Anh",
     "occurTime": "6/1",
     "name": "Lễ hội Cổ Loa",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến An Dương Vương"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến An Dương Vương",
+    "relativeKeyWord": "lehoicoloahttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhanoionganh61lehoitruyenthongvietnamcolienquanenanduongvuong"
   },
   {
     "location": "Ninh Bình, Gia Viễn",
     "occurTime": "6/1",
     "name": "Lễ hội chùa Bái Đính",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. "
+    "detail": "Lễ hội truyền thống Việt Nam. ",
+    "relativeKeyWord": "lehoichuabaiinhhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamninhbinhgiavien61lehoitruyenthongvietnam"
   },
   {
     "location": "Nam Định, Vụ Bản",
     "occurTime": "7/1",
     "name": "Chợ Viềng",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. "
+    "detail": "Lễ hội truyền thống Việt Nam. ",
+    "relativeKeyWord": "chovienghttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnaminhvuban71lehoitruyenthongvietnam"
   },
   {
     "location": "Phú Yên, Ô Loan",
     "occurTime": "7/1",
     "name": "Lễ hội đầm Ô Loan",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. "
+    "detail": "Lễ hội truyền thống Việt Nam. ",
+    "relativeKeyWord": "lehoiamoloanhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamphuyenoloan71lehoitruyenthongvietnam"
   },
   {
     "location": "Tây Ninh, Đạo Cao Đài",
     "occurTime": "",
     "name": "Đại lễ Đức Chí Tôn",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Đức Chí Tôn"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Đức Chí Tôn",
+    "relativeKeyWord": "aileucchitonhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamtayninhaocaoailehoitruyenthongvietnamcolienquanenucchiton"
   },
   {
     "location": "Quảng Ninh, núi Yên Tử",
     "occurTime": "10/1",
     "name": "Hội xuân Yên Tử",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức Thiền phái Trúc Lâm, đến hết tháng 3. Có liên quan đến Trần Nhân Tông"
+    "detail": "Lễ hội truyền thống tổ chức Thiền phái Trúc Lâm, đến hết tháng 3. Có liên quan đến Trần Nhân Tông",
+    "relativeKeyWord": "hoixuanyentuhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamquangninhnuiyentu101lehoitruyenthongtochucthienphaitruclamenhetthang3colienquanentrannhantong"
   },
   {
     "location": "Phú Thọ, huyện Tam Nông",
     "occurTime": "13/1",
     "name": "Hội phết Hiền Quan",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức Thòi Hùng vương thứ 6 vàtthời Hai Bà Trưng. Có liên quan đến Thiều Hoa công chúa, tứ vị đại tần họ Hà (Hà Hắc Long, Hà Hiên Cương, Hà Thổ Lân và Hà Sơn Thắng), hai tướng công : Bùi Thạch Đa và Bùi Thạch Đê."
+    "detail": "Lễ hội truyền thống tổ chức Thòi Hùng vương thứ 6 vàtthời Hai Bà Trưng. Có liên quan đến Thiều Hoa công chúa, tứ vị đại tần họ Hà (Hà Hắc Long, Hà Hiên Cương, Hà Thổ Lân và Hà Sơn Thắng), hai tướng công : Bùi Thạch Đa và Bùi Thạch Đê.",
+    "relativeKeyWord": "hoiphethienquanhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamphuthohuyentamnong131lehoitruyenthongtochucthoihungvuongthu6vatthoihaibatrungcolienquanenthieuhoacongchuatuviaitanhohahahaclonghahiencuonghatholanvahasonthanghaituongcongbuithachavabuithache"
   },
   {
     "location": "Bắc Ninh, huyện Tiên Du",
     "occurTime": "13/1",
     "name": "Hội Lim",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Nguyễn Đình Diễn"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Nguyễn Đình Diễn",
+    "relativeKeyWord": "hoilimhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnambacninhhuyentiendu131lehoitruyenthongvietnamcolienquanennguyeninhdien"
   },
   {
     "location": "Hà Nội, huyện Mỹ Đức",
     "occurTime": "6/1",
     "name": "Lễ hội chùa Hương",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức đến tháng 3 âm lịch. Có liên quan đến Quan Thế Âm Bồ Tát"
+    "detail": "Lễ hội truyền thống tổ chức đến tháng 3 âm lịch. Có liên quan đến Quan Thế Âm Bồ Tát",
+    "relativeKeyWord": "lehoichuahuonghttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhanoihuyenmyuc61lehoitruyenthongtochucenthang3amlichcolienquanenquantheambotat"
   },
   {
     "location": "Hải Dương, huyện Chí Linh",
     "occurTime": "15/1",
     "name": "Hội chùa Côn Sơn",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Huyền Quang, Nguyễn Trãi"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Huyền Quang, Nguyễn Trãi",
+    "relativeKeyWord": "hoichuaconsonhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhaiduonghuyenchilinh151lehoitruyenthongvietnamcolienquanenhuyenquangnguyentrai"
   },
   {
     "location": "Long An, thị trấn Tầm Vu",
     "occurTime": "14/1",
     "name": "Lễ hội làm chay",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức đến 16/1. Có liên quan đến Đỗ Tường Phong, Đỗ Tường Tự"
+    "detail": "Lễ hội truyền thống tổ chức đến 16/1. Có liên quan đến Đỗ Tường Phong, Đỗ Tường Tự",
+    "relativeKeyWord": "lehoilamchayhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamlonganthitrantamvu141lehoitruyenthongtochucen161colienquanenotuongphongotuongtu"
   },
   {
     "location": "Nhiều quốc gia",
     "occurTime": "15/1",
     "name": "Tết Nguyên tiêu",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức đêm 14 đến nửa đêm 15/1. "
+    "detail": "Lễ hội truyền thống tổ chức đêm 14 đến nửa đêm 15/1. ",
+    "relativeKeyWord": "tetnguyentieuhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnhieuquocgia151lehoitruyenthongtochucem14ennuaem151"
   },
   {
     "location": "Vĩnh Phúc, huyện Lập Thạch",
     "occurTime": "16/1",
     "name": "Lễ hội chọi trâu",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức không tổ chức từ 1947-2002. "
+    "detail": "Lễ hội truyền thống tổ chức không tổ chức từ 1947-2002. ",
+    "relativeKeyWord": "lehoichoitrauhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamvinhphuchuyenlapthach161lehoitruyenthongtochuckhongtochuctu19472002"
   },
   {
     "location": "Tây Ninh, Núi Bà Đen",
     "occurTime": "4/1",
     "name": "Hội Xuân núi Bà",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức đến 16/1. Có liên quan đến Linh Sơn Thánh Mẫu"
+    "detail": "Lễ hội truyền thống tổ chức đến 16/1. Có liên quan đến Linh Sơn Thánh Mẫu",
+    "relativeKeyWord": "hoixuannuibahttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamtayninhnuibaen41lehoitruyenthongtochucen161colienquanenlinhsonthanhmau"
   },
   {
     "location": "Hà Nội, Hồ Tây",
     "occurTime": "10/2",
     "name": "Lễ hội đình Yên Phụ",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức khôi phục từ 2003. Có liên quan đến Uy Linh Lang, Vương Duy, Vương Ba"
+    "detail": "Lễ hội truyền thống tổ chức khôi phục từ 2003. Có liên quan đến Uy Linh Lang, Vương Duy, Vương Ba",
+    "relativeKeyWord": "lehoiinhyenphuhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhanoihotay102lehoitruyenthongtochuckhoiphuctu2003colienquanenuylinhlangvuongduyvuongba"
   },
   {
     "location": "Hà Nội, Đông Anh",
     "occurTime": "10/2",
     "name": "Lễ hội Miếu Mạch Lũng",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Minh Mỗ Đại vương Thượng đẳng thần"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Minh Mỗ Đại vương Thượng đẳng thần",
+    "relativeKeyWord": "lehoimieumachlunghttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhanoionganh102lehoitruyenthongvietnamcolienquanenminhmoaivuongthuongangthan"
   },
   {
     "location": "Đà Nẵng, Ngũ Hành Sơn",
     "occurTime": "19/2",
     "name": "Lễ hội Quán Thế Âm",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức diễn ra trong 3 ngày. Có liên quan đến Quán Thế Âm Bồ Tát"
+    "detail": "Lễ hội truyền thống tổ chức diễn ra trong 3 ngày. Có liên quan đến Quán Thế Âm Bồ Tát",
+    "relativeKeyWord": "lehoiquantheamhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamanangnguhanhson192lehoitruyenthongtochucdienratrong3ngaycolienquanenquantheambotat"
   },
   {
     "location": "",
     "occurTime": "",
     "name": "Tiết Thanh minh",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức diễn ra sau tiết xuân phân trước tiết cốc vũ. "
+    "detail": "Lễ hội truyền thống tổ chức diễn ra sau tiết xuân phân trước tiết cốc vũ. ",
+    "relativeKeyWord": "tietthanhminhhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamlehoitruyenthongtochucdienrasautietxuanphantruoctietcocvu"
   },
   {
     "location": "Tây Nguyên",
     "occurTime": "",
     "name": "Hội đua voi",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức lớn nhất ở Đắc Lắc, bản Đôn, tổ chức 2 năm 1 lần vào tháng 3 âm lịch. "
+    "detail": "Lễ hội truyền thống tổ chức lớn nhất ở Đắc Lắc, bản Đôn, tổ chức 2 năm 1 lần vào tháng 3 âm lịch. ",
+    "relativeKeyWord": "hoiuavoihttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamtaynguyenlehoitruyenthongtochuclonnhatoaclacbanontochuc2nam1lanvaothang3amlich"
   },
   {
     "location": "",
     "occurTime": "3/3",
     "name": "Tết Hàn thực",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Giới Tử Thôi, Tấn Văn Công"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Giới Tử Thôi, Tấn Văn Công",
+    "relativeKeyWord": "tethanthuchttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnam33lehoitruyenthongvietnamcolienquanengioituthoitanvancong"
   },
   {
     "location": "Nam Định, Vụ Bản",
     "occurTime": "3/3",
     "name": "Hội Phủ Giầy",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Mẫu Liễu Hạnh"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Mẫu Liễu Hạnh",
+    "relativeKeyWord": "hoiphugiayhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnaminhvuban33lehoitruyenthongvietnamcolienquanenmaulieuhanh"
   },
   {
     "location": "Thừa Thiên Huế, huyện Hương Trà",
     "occurTime": "2/3",
     "name": "Lễ hội Điện Hòn Chén",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Thiên Y A Na"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Thiên Y A Na",
+    "relativeKeyWord": "lehoiienhonchenhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamthuathienhuehuyenhuongtra23lehoitruyenthongvietnamcolienquanenthienyana"
   },
   {
     "location": "Hà Tây, Quốc Oai",
     "occurTime": "3/3",
     "name": "Lễ hội Chùa Thầy",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức đến 7/3. Có liên quan đến Từ Đạo Hạnh"
+    "detail": "Lễ hội truyền thống tổ chức đến 7/3. Có liên quan đến Từ Đạo Hạnh",
+    "relativeKeyWord": "lehoichuathayhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhatayquocoai33lehoitruyenthongtochucen73colienquanentuaohanh"
   },
   {
     "location": "Ninh Bình, huyện Hoa Lư",
     "occurTime": "6/3",
     "name": "Lễ hội Hoa Lư",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức tên khác: Lễ hội cố đô Hoa Lư, đến 10/3. Có liên quan đến Đinh Bộ Lĩnh"
+    "detail": "Lễ hội truyền thống tổ chức tên khác: Lễ hội cố đô Hoa Lư, đến 10/3. Có liên quan đến Đinh Bộ Lĩnh",
+    "relativeKeyWord": "lehoihoaluhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamninhbinhhuyenhoalu63lehoitruyenthongtochuctenkhaclehoicoohoaluen103colienquaneninhbolinh"
   },
   {
     "location": "Ninh Bình, huyện Hoa Lư",
     "occurTime": "14/3",
     "name": "Lễ hội đền Thái Vi",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức đến 16/3. Có liên quan đến Trần Thái Tông, Trần Thánh Tông, Trần Nhân Tông, Trần Anh Tông, Hiển Từ Hoàng Thái Hậu"
+    "detail": "Lễ hội truyền thống tổ chức đến 16/3. Có liên quan đến Trần Thái Tông, Trần Thánh Tông, Trần Nhân Tông, Trần Anh Tông, Hiển Từ Hoàng Thái Hậu",
+    "relativeKeyWord": "lehoienthaivihttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamninhbinhhuyenhoalu143lehoitruyenthongtochucen163colienquanentranthaitongtranthanhtongtrannhantongtrananhtonghientuhoangthaihau"
   },
   {
     "location": "Hưng Yên, huyện Ân Thi",
     "occurTime": "8/3",
     "name": "Lễ hội Nam Trì",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức kéo dài 5 ngày. Có liên quan đến Lang Công, Bảo Công, Công chúa Hùng vương Lâu nương"
+    "detail": "Lễ hội truyền thống tổ chức kéo dài 5 ngày. Có liên quan đến Lang Công, Bảo Công, Công chúa Hùng vương Lâu nương",
+    "relativeKeyWord": "lehoinamtrihttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhungyenhuyenanthi83lehoitruyenthongtochuckeodai5ngaycolienquanenlangcongbaocongcongchuahungvuonglaunuong"
   },
   {
     "location": "Nhiều nơi ở Việt Nam",
     "occurTime": "10/3",
     "name": "Giỗ tổ Hùng Vương",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức lớn nhất tại Đền Hùng, Phú Thọ. Có liên quan đến Vua Hùng"
+    "detail": "Lễ hội truyền thống tổ chức lớn nhất tại Đền Hùng, Phú Thọ. Có liên quan đến Vua Hùng",
+    "relativeKeyWord": "giotohungvuonghttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnhieunoiovietnam103lehoitruyenthongtochuclonnhattaienhungphuthocolienquanenvuahung"
   },
   {
     "location": "Hưng Yên, Phố Hiến",
     "occurTime": "10/3",
     "name": "Lễ hội đền Mẫu",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức đến 15/3. Có liên quan đến Dương Quý Phi"
+    "detail": "Lễ hội truyền thống tổ chức đến 15/3. Có liên quan đến Dương Quý Phi",
+    "relativeKeyWord": "lehoienmauhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhungyenphohien103lehoitruyenthongtochucen153colienquanenduongquyphi"
   },
   {
     "location": "Hải Phòng, huyện Cát Hải, Thị trấn Cát Bà",
     "occurTime": "",
     "name": "Lễ hội Làng cá Cát Bà",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức 1/4 dương lịch. Có liên quan đến Hồ Chí Minh"
+    "detail": "Lễ hội truyền thống tổ chức 1/4 dương lịch. Có liên quan đến Hồ Chí Minh",
+    "relativeKeyWord": "lehoilangcacatbahttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhaiphonghuyencathaithitrancatbalehoitruyenthongtochuc14duonglichcolienquanenhochiminh"
   },
   {
     "location": "Hà Nội, huyện Gia Lâm",
     "occurTime": "7/4",
     "name": "Hội Gióng Phù Đổng",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Thánh Gióng"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Thánh Gióng",
+    "relativeKeyWord": "hoigiongphuonghttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhanoihuyengialam74lehoitruyenthongvietnamcolienquanenthanhgiong"
   },
   {
     "location": "Nhiều quốc gia",
     "occurTime": "8/4",
     "name": "Lễ Phật Đản",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức Phật giáo. Có liên quan đến Phật Tất Đạt Đa"
+    "detail": "Lễ hội truyền thống tổ chức Phật giáo. Có liên quan đến Phật Tất Đạt Đa",
+    "relativeKeyWord": "lephatanhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnhieuquocgia84lehoitruyenthongtochucphatgiaocolienquanenphattatata"
   },
   {
     "location": "Nam Bộ",
     "occurTime": "14/4",
     "name": "Lễ hội Chol Chnam Thmay",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức Tết người Khmer. "
+    "detail": "Lễ hội truyền thống tổ chức Tết người Khmer. ",
+    "relativeKeyWord": "lehoicholchnamthmayhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnambo144lehoitruyenthongtochuctetnguoikhmer"
   },
   {
     "location": "Quảng Ngãi, huyện Lý Sơn",
     "occurTime": "18/3",
     "name": "Lễ khao lề thế lính",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức đến 20/3. "
+    "detail": "Lễ hội truyền thống tổ chức đến 20/3. ",
+    "relativeKeyWord": "lekhaolethelinhhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamquangngaihuyenlyson183lehoitruyenthongtochucen203"
   },
   {
     "location": "Miếu Bà Chúa Xứ, Núi Sam, An Giang, Châu Đốc",
     "occurTime": "23/4",
     "name": "Lễ hội miếu Bà Chúa Xứ",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức đến 27/4. Có liên quan đến Bà Chúa Xứ"
+    "detail": "Lễ hội truyền thống tổ chức đến 27/4. Có liên quan đến Bà Chúa Xứ",
+    "relativeKeyWord": "lehoimieubachuaxuhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnammieubachuaxunuisamangiangchauoc234lehoitruyenthongtochucen274colienquanenbachuaxu"
   },
   {
     "location": "Nhiều quốc gia",
     "occurTime": "5/5",
     "name": "Tết Đoan ngọ",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức Tết giết sâu bọ. "
+    "detail": "Lễ hội truyền thống tổ chức Tết giết sâu bọ. ",
+    "relativeKeyWord": "tetoanngohttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnhieuquocgia55lehoitruyenthongtochuctetgietsaubo"
   },
   {
     "location": "Nhiều quốc gia",
     "occurTime": "7/7",
     "name": "Thất Tịch",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức Ngày lễ tình nhân Đông phương. Có liên quan đến Ngưu Lang, Chức Nữ"
+    "detail": "Lễ hội truyền thống tổ chức Ngày lễ tình nhân Đông phương. Có liên quan đến Ngưu Lang, Chức Nữ",
+    "relativeKeyWord": "thattichhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnhieuquocgia77lehoitruyenthongtochucngayletinhnhanongphuongcolienquanennguulangchucnu"
   },
   {
     "location": "Nhiều quốc gia",
     "occurTime": "15/7",
     "name": "Lễ Vu Lan, Tết Trung Nguyên",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức báo hiếu cha mẹ. Có liên quan đến Bồ tát Mục Liên"
+    "detail": "Lễ hội truyền thống tổ chức báo hiếu cha mẹ. Có liên quan đến Bồ tát Mục Liên",
+    "relativeKeyWord": "levulantettrungnguyenhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnhieuquocgia157lehoitruyenthongtochucbaohieuchamecolienquanenbotatmuclien"
   },
   {
     "location": "Phan Thiết (Bình Thuận)",
     "occurTime": "",
     "name": "Lễ hội Nghinh Ông (Quan Thánh Đế Quân)",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức của Người Hoa, tổ chức vào năm chẵn Tây Lịch. "
+    "detail": "Lễ hội truyền thống tổ chức của Người Hoa, tổ chức vào năm chẵn Tây Lịch. ",
+    "relativeKeyWord": "lehoinghinhongquanthanhequanhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamphanthietbinhthuanlehoitruyenthongtochuccuanguoihoatochucvaonamchantaylich"
   },
   {
     "location": "Bình Thuận",
     "occurTime": "",
     "name": "Lễ hội Katê",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức Lễ hội người Chăm, 1 tháng 7 theo lịch Chăm. "
+    "detail": "Lễ hội truyền thống tổ chức Lễ hội người Chăm, 1 tháng 7 theo lịch Chăm. ",
+    "relativeKeyWord": "lehoikatehttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnambinhthuanlehoitruyenthongtochuclehoinguoicham1thang7theolichcham"
   },
   {
     "location": "Hải Phòng, Đồ Sơn",
     "occurTime": "9/8",
     "name": "Lễ hội chọi trâu",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. "
+    "detail": "Lễ hội truyền thống Việt Nam. ",
+    "relativeKeyWord": "lehoichoitrauhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhaiphongoson98lehoitruyenthongvietnam"
   },
   {
     "location": "Nhiều quốc gia",
     "occurTime": "15/8",
     "name": "Tết Trung Thu",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức Tết thiếu nhi. Có liên quan đến Hằng Nga, Hậu Nghệ, Đường Minh Hoàng, Chú Cuội"
+    "detail": "Lễ hội truyền thống tổ chức Tết thiếu nhi. Có liên quan đến Hằng Nga, Hậu Nghệ, Đường Minh Hoàng, Chú Cuội",
+    "relativeKeyWord": "tettrungthuhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnhieuquocgia158lehoitruyenthongtochuctetthieunhicolienquanenhangngahaungheuongminhhoangchucuoi"
   },
   {
     "location": "Hải Dương, huyện Chí Linh",
     "occurTime": "15/8",
     "name": "Hội Đền Kiếp Bạc",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức đến 20/8. Có liên quan đến Trần Hưng Đạo"
+    "detail": "Lễ hội truyền thống tổ chức đến 20/8. Có liên quan đến Trần Hưng Đạo",
+    "relativeKeyWord": "hoienkiepbachttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamhaiduonghuyenchilinh158lehoitruyenthongtochucen208colienquanentranhungao"
   },
   {
     "location": "Tây Ninh, Tòa Thánh Tây Ninh",
     "occurTime": "15/8",
     "name": "Hội Yến Diêu Trì",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức Đạo Cao Đài. Có liên quan đến Cao Quỳnh Cư, Phạm Công Tắc, Cao Hoài Sang, Nguyễn Thị Hiếu"
+    "detail": "Lễ hội truyền thống tổ chức Đạo Cao Đài. Có liên quan đến Cao Quỳnh Cư, Phạm Công Tắc, Cao Hoài Sang, Nguyễn Thị Hiếu",
+    "relativeKeyWord": "hoiyendieutrihttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamtayninhtoathanhtayninh158lehoitruyenthongtochucaocaoaicolienquanencaoquynhcuphamcongtaccaohoaisangnguyenthihieu"
   },
   {
     "location": "Bình Thuận, Tiền Giang",
     "occurTime": "",
     "name": "Lễ hội Nghinh Ông (Cá Voi)",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. "
+    "detail": "Lễ hội truyền thống Việt Nam. ",
+    "relativeKeyWord": "lehoinghinhongcavoihttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnambinhthuantiengianglehoitruyenthongvietnam"
   },
   {
     "location": "Rạch Giá, Kiên Giang",
     "occurTime": "",
     "name": "Lễ hội AHDT Nguyễn Trung Trực",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Nguyễn Trung Trực"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Nguyễn Trung Trực",
+    "relativeKeyWord": "lehoiahdtnguyentrungtruchttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamrachgiakiengianglehoitruyenthongvietnamcolienquanennguyentrungtruc"
   },
   {
     "location": "Thái Bình, Vũ Thư",
     "occurTime": "13/9",
     "name": "Lễ hội Chùa Keo",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức đến 15/9. Có liên quan đến Thiền sư Không Lộ"
+    "detail": "Lễ hội truyền thống tổ chức đến 15/9. Có liên quan đến Thiền sư Không Lộ",
+    "relativeKeyWord": "lehoichuakeohttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamthaibinhvuthu139lehoitruyenthongtochucen159colienquanenthiensukhonglo"
   },
   {
     "location": "Nhiều quốc gia",
     "occurTime": "15/10",
     "name": "Tết cơm mới",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống tổ chức Tết song thập. "
+    "detail": "Lễ hội truyền thống tổ chức Tết song thập. ",
+    "relativeKeyWord": "tetcommoihttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnhieuquocgia1510lehoitruyenthongtochuctetsongthap"
   },
   {
     "location": "Ninh Bình, huyện Kim Sơn",
     "occurTime": "13/11",
     "name": "Lễ hội đền Nguyễn Công Trứ",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Nguyễn Công Trứ"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Nguyễn Công Trứ",
+    "relativeKeyWord": "lehoiennguyencongtruhttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamninhbinhhuyenkimson1311lehoitruyenthongvietnamcolienquanennguyencongtru"
   },
   {
     "location": "Nhiều quốc gia",
     "occurTime": "23/12",
     "name": "Tiễn Ông Táo về trời",
     "source": "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam",
-    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Thổ Công, Thổ địa, Thổ kỳ"
+    "detail": "Lễ hội truyền thống Việt Nam. Có liên quan đến Thổ Công, Thổ địa, Thổ kỳ",
+    "relativeKeyWord": "tienongtaovetroihttpsviwikipediaorgwikile1bb85he1bb99ivie1bb87tnamnhieuquocgia2312lehoitruyenthongvietnamcolienquanenthocongthoiathoky"
   }
 ]

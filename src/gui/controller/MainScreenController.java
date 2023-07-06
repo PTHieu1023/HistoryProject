@@ -33,6 +33,12 @@ import javafx.scene.text.Text;
 public class MainScreenController implements Initializable{
 
     @FXML
+    private ProgressIndicator animLoading;
+
+    @FXML
+    private Label ibPageCount;
+
+    @FXML
     private Label lbName;
 
     @FXML
@@ -73,6 +79,11 @@ public class MainScreenController implements Initializable{
 
     @FXML 
     private Label lbRelation;
+
+    @FXML
+    void sortData(ActionEvent event) {
+        
+    }
 
     @FXML
     void saveData(ActionEvent event) {
@@ -157,12 +168,10 @@ public class MainScreenController implements Initializable{
     private DataHandler dataHandler;
     private Task<Void> crawlingTask;
     private Thread crawlingThread;
-    private StringHandler stringHandler;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        stringHandler = new StringHandler();
         dataHandler = new DataHandler();
 
         listviewCrawledData.setItems(dataHandler.getCrawler().getDataList());
@@ -288,12 +297,12 @@ public class MainScreenController implements Initializable{
     }
 
     private void searchData(String searchKey) {
-        searchKey = stringHandler.normalize(searchKey);
+        searchKey = StringHandler.normalize(searchKey);
         int i = 0;
         Historical tmp;
         while(i<filterList.size()) {
             tmp = filterList.get(i);
-            if(!stringHandler.normalize(tmp.getName()).contains(searchKey))
+            if(!StringHandler.normalize(tmp.getName()).contains(searchKey))
                 filterList.remove(tmp);
             else
                 i++;

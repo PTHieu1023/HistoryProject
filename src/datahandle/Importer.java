@@ -67,19 +67,21 @@ public class Importer {
         dynasties.clear();
         String jsonData = readJsonFile(dynastyPath);
         Dynasty[] objects = gson.fromJson(jsonData, Dynasty[].class);
-        for(Dynasty object: objects) {
-            dynasties.add(object);
-            dataList.add(object);
-        }
+        if(objects != null)
+            for(Dynasty object: objects) {
+                dynasties.add(object);
+                dataList.add(object);
+            }
     }
 
     private void importFigures() {
         figures.clear();
         String jsonData = readJsonFile(figuresPath);
         Figure[] objects = gson.fromJson(jsonData, Figure[].class);
-        for(Figure object: objects) {
-            figures.add(object);
-            dataList.add(object);
+        if(objects != null)
+            for(Figure object: objects) {
+                figures.add(object);
+                dataList.add(object);
         }
     }
 
@@ -87,30 +89,33 @@ public class Importer {
         wars.clear();
         String jsonData = readJsonFile(warPath);
         War[] objects = gson.fromJson(jsonData, War[].class);
-        for(War object: objects) {
-            wars.add(object);
-            dataList.add(object);
-        }
+        if(objects != null)
+            for(War object: objects) {
+                wars.add(object);
+                dataList.add(object);
+            }
     }
 
     private void importFestivals() {
         festivals.clear();
         String jsonData = readJsonFile(festivalPath);
         Festival[] objects = gson.fromJson(jsonData, Festival[].class);
-        for(Festival object: objects) {
-            festivals.add(object);
-            dataList.add(object);
-        }
+        if(objects !=  null)
+            for(Festival object: objects) {
+                festivals.add(object);
+                dataList.add(object);
+            }
     }
 
     private void importLocations() {
         locations.clear();
         String jsonData = readJsonFile(locationPath);
         Location[] objects = gson.fromJson(jsonData, Location[].class);
-        for(Location object: objects) {
-            locations.add(object);
-            dataList.add(object);
-        }
+        if(objects != null)
+            for(Location object: objects) {
+                locations.add(object);
+                dataList.add(object);
+            }
     }
 
     public void importData() {

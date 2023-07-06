@@ -10,6 +10,7 @@
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.control.RadioMenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -17,7 +18,10 @@
 <?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
@@ -126,11 +130,51 @@
                   </VBox>
                </top>
                <left>
-                  <ListView fx:id="listviewData" prefHeight="500.0" prefWidth="360.0" style="-fx-border-width: 5; -fx-border-radius: 5; -fx-background-radius: 10;" styleClass="brown-border" stylesheets="@../style/Style.css" BorderPane.alignment="CENTER">
+                  <VBox style="-fx-border-radius: 10px; -fx-border-width: 5px; -fx-background-radius: 10px;" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets bottom="30.0" left="30.0" right="30.0" />
                      </BorderPane.margin>
-                  </ListView>
+                     <children>
+                        <GridPane prefHeight="30.0" prefWidth="360.0" styleClass="brown-bg">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="lbPageCount" text="22/2224" textFill="WHITE" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#sortData" prefHeight="25.0" prefWidth="25.0" styleClass="brown-bg" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <graphic>
+                                    <VBox alignment="CENTER_LEFT" spacing="1.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="5.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="25.0" />
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="5.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="15.0" />
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="5.0" layoutX="10.0" layoutY="16.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="10.0" />
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" right="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </GridPane>
+                        <ListView fx:id="listviewData" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="455.0" prefWidth="360.0" style="-fx-background-radius: 10px;" stylesheets="@../style/Style.css" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="brown-border" />
+                        <String fx:value="brown-bg" />
+                     </styleClass>
+                  </VBox>
                </left>
                <center>
                   <ScrollPane hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../style/Style.css" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
@@ -198,17 +242,24 @@
             <Insets bottom="150.0" left="400.0" right="400.0" top="150.0" />
          </StackPane.margin>
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#hideCrawlWindow" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #eeeeee;" textAlignment="JUSTIFY">
-               <VBox.margin>
-                  <Insets left="455.0" right="5.0" top="1.0" />
-               </VBox.margin>
-               <font>
-                  <Font name="Agency FB" size="12.0" />
-               </font>
-               <graphic>
-                  <Rectangle arcHeight="1.0" arcWidth="1.0" fill="#820000" height="4.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="15.0" />
-               </graphic>
-            </Button>
+            <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="brown-bg">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#hideCrawlWindow" prefHeight="20.0" prefWidth="30.0" styleClass="brown-bg" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Agency FB" size="12.0" />
+                     </font>
+                     <graphic>
+                        <Rectangle arcHeight="1.0" arcWidth="1.0" fill="WHITE" height="4.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="15.0" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="2.0" />
+               </padding>
+            </HBox>
             <Label fx:id="lbCrawlUpdate" text="Crawling" textFill="#820000">
                <font>
                   <Font name="Agency FB Bold" size="36.0" />
@@ -248,5 +299,6 @@
             </HBox>
          </children>
       </VBox>
+      <ProgressIndicator fx:id="animLoading" prefHeight="53.0" prefWidth="195.0" scaleX="2.5" scaleY="2.5" visible="false" StackPane.alignment="CENTER" />
    </children>
 </StackPane>

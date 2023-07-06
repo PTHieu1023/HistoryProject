@@ -19,4 +19,11 @@ public class Dynasty extends Historical{
         info.append(super.getDetail());
         return info.toString();
     }
+
+    public Dynasty clone() {
+        Dynasty clone = new Dynasty(super.getName(), super.getSource(), timeline);
+        clone.setDetail(super.getDetail());
+        clone.setRelativeKeyWord(super.getRelativeKeyWord());
+        return clone;
+    }
 }

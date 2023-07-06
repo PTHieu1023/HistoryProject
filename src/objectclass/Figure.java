@@ -27,4 +27,11 @@ public class Figure extends Historical{
         info.append(super.getDetail());
         return info.toString();
     }
+
+    public Figure clone() {
+        Figure clone = new Figure(super.getName(), super.getSource(), birth, death);
+        clone.setDetail(super.getDetail());
+        clone.setRelativeKeyWord(super.getRelativeKeyWord());
+        return clone;
+    }
 }

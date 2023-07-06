@@ -32,4 +32,11 @@ public class War extends Historical{
         
         return info.toString();
     }
+
+    public War clone() {
+        War clone = new War(super.getName(), super.getSource(), occurTime, place, result);
+        clone.setDetail(super.getDetail());
+        clone.setRelativeKeyWord(super.getRelativeKeyWord());
+        return clone;
+    }
 }

@@ -13,6 +13,7 @@ import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import objectclass.Festival;
 import objectclass.Historical;
+import othertools.StringHandler;
 
 public class CrawlerFestival {
     private List<Festival> festivals;
@@ -59,16 +60,12 @@ public class CrawlerFestival {
                     }
 
                     Festival festival = new Festival(name, url, location, occurTime);
+                    festival.setRelativeKeyWord(StringHandler.normalize(name + url + location + occurTime + detail));
                     festival.setDetail(detail.toString());
                     festivals.add(festival);
                     Platform.runLater(() -> {
                         dataList.add(festival);
                     });
-                    try {
-                        Thread.sleep(1000);
-                    } catch(InterruptedException e) {
-                        System.out.println("Error in crawling festival: " + festival.getName());
-                    }
                 }
             }
         } catch(IOException e) {

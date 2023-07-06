@@ -24,4 +24,11 @@ public class Location extends Historical{
         info.append(super.getDetail());
         return info.toString();
     }
+
+    public Location clone() {
+        Location clone = new Location(super.getName(), super.getSource(), location, category);
+        clone.setDetail(super.getDetail());
+        clone.setRelativeKeyWord(super.getRelativeKeyWord());
+        return clone;
+    }
 }

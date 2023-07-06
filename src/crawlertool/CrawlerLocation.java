@@ -13,6 +13,7 @@ import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import objectclass.Historical;
 import objectclass.Location;
+import othertools.StringHandler;
 
 public class CrawlerLocation {
 
@@ -86,7 +87,8 @@ public class CrawlerLocation {
                     else    
                         source.setLength(0);
                     Location location = new Location(name, source.toString(), position, category);
-                    location.setDetail(detail.toString());
+                    location.setDetail(detail.toString().replaceAll("\\[.*?\\]", ""));
+                    location.setRelativeKeyWord(StringHandler.normalize(name + position + category + detail));
                     locations.add(location);
 
                     Platform.runLater(() -> {

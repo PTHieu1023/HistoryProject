@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -97,20 +98,40 @@ public class DataHandler {
 
     public void saveData() {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
         PrintWriter writer = createAppendFileWriter(importer.dynastyPath);
-        writer.print(gson.toJson(dynasties)); 
+        List<Dynasty> cloneDynasties = new ArrayList<Dynasty>();
+        for(Dynasty o: dynasties)
+            cloneDynasties.add(o.clone());
+        writer.print(gson.toJson(cloneDynasties)); 
         writer.close();
+
         writer = createAppendFileWriter(importer.figuresPath);
-        writer.print(gson.toJson(figures)); 
+        List<Figure> cloneFigures = new ArrayList<Figure>();
+        for(Figure o: figures)
+            cloneFigures.add(o.clone());
+        writer.print(gson.toJson(cloneFigures)); 
         writer.close();
+
         writer = createAppendFileWriter(importer.warPath);
-        writer.print(gson.toJson(wars));
+        List<War> cloneWars = new ArrayList<War>();
+        for(War o: wars)
+            cloneWars.add(o.clone());
+        writer.print(gson.toJson(cloneWars));
         writer.close(); 
+
         writer = createAppendFileWriter(importer.locationPath);
-        writer.print(gson.toJson(locations)); 
+        List<Location> cloneLocations = new ArrayList<Location>();
+        for(Location o: locations)
+            cloneLocations.add(o.clone());
+        writer.print(gson.toJson(cloneLocations)); 
         writer.close();
+
         writer = createAppendFileWriter(importer.festivalPath);
-        writer.print(gson.toJson(festivals)); 
+        List<Festival> cloneFestivals = new ArrayList<Festival>();
+        for(Festival o: festivals)
+            cloneFestivals.add(o.clone());
+        writer.print(gson.toJson(cloneFestivals)); 
         writer.close();
     }
 }

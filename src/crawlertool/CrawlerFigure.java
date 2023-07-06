@@ -11,6 +11,7 @@ import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import objectclass.Figure;
 import objectclass.Historical;
+import othertools.StringHandler;
 
 public class CrawlerFigure {
     private Document doc = new Document("UTF-8");
@@ -62,8 +63,10 @@ public class CrawlerFigure {
                     }
 
                     detail = doc.select("#content .com-content-article p").first().text();
+                    detail = detail.replaceAll("\\[.*?\\]", "");
                     Figure figure = new Figure(name, source, birth, death);
-                    figure.setDetail(detail.replaceAll("\\[.*?\\]", ""));
+                    figure.setDetail(detail);
+                    figure.setRelativeKeyWord(StringHandler.normalize(name+birth+death+detail));
                     if(!figures.contains(figure)) {
                         figures.add(figure);
                         Platform.runLater(() -> {

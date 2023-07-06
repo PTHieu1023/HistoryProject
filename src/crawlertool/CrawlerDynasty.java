@@ -13,6 +13,7 @@ import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import objectclass.Dynasty;
 import objectclass.Historical;
+import othertools.StringHandler;
 
 public class CrawlerDynasty {
     private Document doc = new Document("UTF-8");
@@ -41,8 +42,9 @@ public class CrawlerDynasty {
                 detailHandle(tr.select("th").first());
                 kings = getRelativeLink(tr.select("td").first());
                 Dynasty dynasty = new Dynasty(name, source, timeline);
-                dynasty.setRelativeKeyWord(kings);
-                dynasty.setDetail(detail.replaceAll("\\[.*?\\]", ""));
+                detail = detail.replaceAll("\\[.*?\\]", "");
+                dynasty.setRelativeKeyWord(StringHandler.normalize(kings + name + timeline + detail));
+                dynasty.setDetail(detail);
                 dynasties.add(dynasty);
                 Platform.runLater(() -> {
                     dataList.add(dynasty);

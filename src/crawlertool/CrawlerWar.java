@@ -13,6 +13,7 @@ import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import objectclass.Historical;
 import objectclass.War;
+import othertools.StringHandler;
 
 public class CrawlerWar {
     
@@ -57,7 +58,7 @@ public class CrawlerWar {
                 
                 War war = new War(name, source, time, place, result);
                 war.setDetail(doc.select("#content > div.com-content-article.item-page > div.com-content-article__body p").first().text());
-                war.setRelativeKeyWord(keyword);
+                war.setRelativeKeyWord(StringHandler.normalize(keyword + name + time + place + result));
                 wars.add(war);
                 
                 Platform.runLater(() -> {
