@@ -26,11 +26,6 @@ public class CrawlerWar implements Crawlable{
         this.dataList = dataList;
         wars = new ArrayList<War>();
     }
-
-    public CrawlerWar(ObservableList<Historical> dataList, List<War> wars) {
-        this.dataList = dataList;
-        this.wars = wars;
-    }
     
     public List<War> getWars() {
         return wars;

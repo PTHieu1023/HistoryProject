@@ -27,11 +27,6 @@ public class CrawlerDynasty implements Crawlable{
         dynasties = new ArrayList<Dynasty>();
     }
 
-    public CrawlerDynasty(ObservableList<Historical> dataList, List<Dynasty> dynasties) {
-        this.dataList = dataList;
-        this.dynasties = dynasties;
-    }
-
     public List<Dynasty> getDynasties() {
         return dynasties;
     }

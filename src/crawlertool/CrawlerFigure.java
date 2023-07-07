@@ -27,11 +27,6 @@ public class CrawlerFigure implements Crawlable{
         figures = new ArrayList<Figure>();
     }
 
-    public CrawlerFigure(ObservableList<Historical> dataList, List<Figure> figures) {
-        this.dataList = dataList;
-        this.figures = figures;
-    }
-
     public List<Figure> getFigures() {
         return figures;
     }

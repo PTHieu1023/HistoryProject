@@ -27,11 +27,6 @@ public class CrawlerFestival implements Crawlable{
         festivals = new ArrayList<Festival>();
     }
 
-    public CrawlerFestival(ObservableList<Historical> dataList, List<Festival> festivals) {
-        this.dataList = dataList;
-        this.festivals = festivals;
-    }
-
     public List<Festival> getFestivals() {
         return festivals;
     }

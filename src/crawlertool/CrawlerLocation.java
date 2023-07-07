@@ -26,11 +26,6 @@ public class CrawlerLocation implements Crawlable{
         locations = new ArrayList<Location>();
     }
 
-    public CrawlerLocation(ObservableList<Historical> dataList, List<Location> locations) {
-        this.dataList = dataList;
-        this.locations = locations;
-    }
-
     public List<Location> getLocations() {
         return locations;
     }
