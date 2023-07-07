@@ -64,11 +64,11 @@ public class DataHandler {
 
     public void useCrawledData(){
         dataList = crawler.getDataList();
-        dynasties = crawler.getDynasties();
-        figures = crawler.getFigures();
-        wars = crawler.getWars();
-        festivals = crawler.getFestivals();
-        locations = crawler.getLocations();
+        dynasties = crawler.getCrawlerDynasty().getDynasties();
+        figures = crawler.getCrawlerFigure().getFigures();
+        wars = crawler.getCrawlerWar().getWars();
+        festivals = crawler.getCrawlerFestival().getFestivals();
+        locations = crawler.getCrawlerLocation().getLocations();
     }
 
     public void useImportedData() {

@@ -4,8 +4,9 @@ import java.util.regex.Pattern;
 
 public class StringHandler {
 
-    private static final String alphabet = " AÁÀẢÃẠaáàảãạĂẮẰẲẴẶăắằẳẵặÂẤẦẨẪẬâấầẩẫậBbCcDdĐđEÉÈẺẼẸeéèẻẽẹÊẾỀỂỄỆêếềểễệFfGgHhIÍÌỈĨỊiíìỉĩịJjKkLlMmNnOÓÒỎÕỌoóòỏõọÔỐỒỔỖỘôốồổỗộƠỚỜỞỠỢơớờởỡợPpQqRrSsTtUÚÙỦŨỤuúùủũụƯỨỪỬỮỰưứừửữựVvWwXxYyZz0123456789+-*/!#$%^&()[]{}`~<>.,;:'\"\\?";
+    private static final String ALPHABET = " AÁÀẢÃẠaáàảãạĂẮẰẲẴẶăắằẳẵặÂẤẦẨẪẬâấầẩẫậBbCcDdĐđEÉÈẺẼẸeéèẻẽẹÊẾỀỂỄỆêếềểễệFfGgHhIÍÌỈĨỊiíìỉĩịJjKkLlMmNnOÓÒỎÕỌoóòỏõọÔỐỒỔỖỘôốồổỗộƠỚỜỞỠỢơớờởỡợPpQqRrSsTtUÚÙỦŨỤuúùủũụƯỨỪỬỮỰưứừửữựVvWwXxYyZz0123456789+-*/!#$%^&()[]{}`~<>.,;:'\"\\?";
 
+    //Chuyển xâu unicode về chuỗi kí tự latin và liên tục
     public static String normalize(String text) {
         String convertedText = text.toLowerCase();
         convertedText = convertedText.replaceAll("đ", "d");
@@ -16,16 +17,12 @@ public class StringHandler {
         return convertedText;
     }
 
-    public static String keyForm(String str) {
-        str.replaceAll(" ", "");
-        return str.toLowerCase();
-    }
-
+    //So sánh 2 xâu
     public static int compare(String a, String b) {
         int dif;
         int len = a.length() < b.length() ? a.length() : b.length();
         for(int i = 0; i < len; i++) {
-            dif = alphabet.indexOf(a.charAt(i)) - alphabet.indexOf(b.charAt(i));
+            dif = ALPHABET.indexOf(a.charAt(i)) - ALPHABET.indexOf(b.charAt(i));
             if(dif != 0)
                 return dif;
         }   

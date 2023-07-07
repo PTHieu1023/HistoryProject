@@ -1,6 +1,7 @@
 package crawlertool;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -16,22 +17,33 @@ import javafx.collections.ObservableList;
 import othertools.StringHandler;
 
 public class CrawlerWar implements Crawlable{
-    
-    private List<War> wars;
+
     private ObservableList<Historical> dataList;
+    private List<War> wars;
     private Document doc = new Document("UTF-8");
-    
-    public List<War> getWars() {
-        return wars;
+
+    public CrawlerWar(ObservableList<Historical> dataList) {
+        this.dataList = dataList;
+        wars = new ArrayList<War>();
     }
-    
+
     public CrawlerWar(ObservableList<Historical> dataList, List<War> wars) {
         this.dataList = dataList;
         this.wars = wars;
     }
+    
+    public List<War> getWars() {
+        return wars;
+    }
 
     @Override
     public void crawlData() {
+        
+        if(wars == null)
+            wars = new ArrayList<War>();
+        else 
+            wars.clear();
+
         String name;
         String place;
         String result;

@@ -1,6 +1,7 @@
 package crawlertool;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -17,11 +18,12 @@ import othertools.StringHandler;
 
 public class CrawlerLocation implements Crawlable{
 
-    private List<Location> locations;
     private ObservableList<Historical> dataList;
+    private List<Location> locations;
 
-    public List<Location> getLocations() {
-        return locations;
+    public CrawlerLocation(ObservableList<Historical> dataList) {
+        this.dataList = dataList;
+        locations = new ArrayList<Location>();
     }
 
     public CrawlerLocation(ObservableList<Historical> dataList, List<Location> locations) {
@@ -29,23 +31,18 @@ public class CrawlerLocation implements Crawlable{
         this.locations = locations;
     }
 
-    private String getDetail(String url){
-        String detail;
-
-        try{
-            Document detailDoc = new Document("UTF-8");
-            detailDoc = Jsoup.connect(url).get();
-            detail = detailDoc.selectFirst("#mw-content-text > div.mw-parser-output > p").text();
-        } catch (IOException e) {
-            detail = "";
-        } catch (NullPointerException e) {
-            detail = "";
-        }
-        return detail.replaceAll("\\[.*?\\]", "");
+    public List<Location> getLocations() {
+        return locations;
     }
 
     @Override
     public void crawlData() {
+
+        if(locations == null) 
+            locations = new ArrayList<Location>();
+        else
+            locations.clear();
+
         String url = "https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_Di_t%C3%ADch_qu%E1%BB%91c_gia_Vi%E1%BB%87t_Nam";
         String name;
         String position;
@@ -99,5 +96,20 @@ public class CrawlerLocation implements Crawlable{
             }
         } 
     }
-}
 
+    private String getDetail(String url){
+        String detail;
+
+        try{
+            Document detailDoc = new Document("UTF-8");
+            detailDoc = Jsoup.connect(url).get();
+            detail = detailDoc.selectFirst("#mw-content-text > div.mw-parser-output > p").text();
+        } catch (IOException e) {
+            detail = "";
+        } catch (NullPointerException e) {
+            detail = "";
+        }
+        return detail.replaceAll("\\[.*?\\]", "");
+    }
+
+}

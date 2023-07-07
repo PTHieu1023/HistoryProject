@@ -1,6 +1,7 @@
 package crawlertool;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -16,11 +17,14 @@ import javafx.collections.ObservableList;
 import othertools.StringHandler;
 
 public class CrawlerFestival implements Crawlable{
+
     private List<Festival> festivals;
     private ObservableList<Historical> dataList;
+    private Document doc = new Document("UTF-8");
 
-    public List<Festival> getFestivals() {
-        return festivals;
+    public CrawlerFestival(ObservableList<Historical> dataList) {
+        this.dataList = dataList;
+        festivals = new ArrayList<Festival>();
     }
 
     public CrawlerFestival(ObservableList<Historical> dataList, List<Festival> festivals) {
@@ -28,10 +32,18 @@ public class CrawlerFestival implements Crawlable{
         this.festivals = festivals;
     }
 
-    private Document doc = new Document("UTF-8");
+    public List<Festival> getFestivals() {
+        return festivals;
+    }
 
     @Override
     public void crawlData() {
+        
+        if(festivals == null)
+            festivals = new ArrayList<Festival>();
+        else
+            festivals.clear();
+
         String name;
         String location;
         String occurTime;

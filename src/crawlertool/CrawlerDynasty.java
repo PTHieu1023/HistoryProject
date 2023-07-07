@@ -1,6 +1,7 @@
 package crawlertool;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -16,20 +17,31 @@ import javafx.collections.ObservableList;
 import othertools.StringHandler;
 
 public class CrawlerDynasty implements Crawlable{
+
     private Document doc = new Document("UTF-8");
     private List<Dynasty> dynasties;
     private ObservableList<Historical> dataList;
 
-    public List<Dynasty> getDynasties() {
-        return dynasties;
+    public CrawlerDynasty(ObservableList<Historical> dataList) {
+        this.dataList = dataList;
+        dynasties = new ArrayList<Dynasty>();
     }
+
     public CrawlerDynasty(ObservableList<Historical> dataList, List<Dynasty> dynasties) {
         this.dataList = dataList;
         this.dynasties = dynasties;
     }
 
+    public List<Dynasty> getDynasties() {
+        return dynasties;
+    }
+
     @Override
     public void crawlData() {
+        if(dynasties == null)
+            dynasties = new ArrayList<Dynasty>();
+        else
+            dynasties.clear();
         String url  = "https://vi.wikipedia.org/wiki/Vua_Vi%E1%BB%87t_Nam#";
         try {
             doc = Jsoup.connect(url).get();

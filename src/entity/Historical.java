@@ -6,38 +6,64 @@ import java.util.List;
 import othertools.StringHandler;
 
 public class Historical {
+
     private String name;
     private String source;
     private String detail;
     private List<Historical> relative;
     private String relativeKeyWord;
+
+    public Historical(String name, String source) {
+        this.name = name;
+        this.source = source;
+    }
+
     public String getName() {
         return name;
     }
+
     public String getSource() {
         return source;
     }
+
+    public String getDetail() {
+        return detail;
+    }
+
     public List<Historical> getRelative() {
         return relative;
     }
+
     public String getRelativeKeyWord() {
         return relativeKeyWord;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
     public void setRelativeKeyWord(String relativeKeyWord) {
         this.relativeKeyWord = relativeKeyWord;
     }
-    public Historical(String name, String source) {
-        this.name = name;
-        this.source = source;
-    }
-    public String getDetail() {
-        return detail;
-    }
-    public void setDetail(String detail) {
-        this.detail = detail;
+
+    //Tìm và tạo mối liên kết giữa 2 thực thể
+    public void setRelation(Historical b) {
+        if(relativeKeyWord == null)
+            relativeKeyWord = StringHandler.normalize(name + detail);
+        if(relativeKeyWord.contains(StringHandler.normalize(b.getName()))) {
+            addRelation(b);
+            b.addRelation(this);
+        }
     }
 
+    //Tạo liên kết 2 chiều giữa 2 thực thể
     public void addRelation(Historical obj) {
         if(relative == null)
             relative = new ArrayList<Historical>();
@@ -70,21 +96,6 @@ public class Historical {
         } else if (detail.equals(otherHistotical.detail))
             return true;
         return false;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setSource(String source) {
-        this.source = source;
-    }
-    public void setRelation(Historical b) {
-        if(relativeKeyWord == null)
-            relativeKeyWord = StringHandler.normalize(name + detail);
-        if(relativeKeyWord.contains(StringHandler.normalize(b.getName()))) {
-            addRelation(b);
-            b.addRelation(this);
-        }
     }
 
 }

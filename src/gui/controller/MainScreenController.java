@@ -33,6 +33,7 @@ import javafx.scene.text.Text;
 
 public class MainScreenController implements Initializable{
 
+    //Khai báo và xử lý phần tử FXML
     @FXML
     private Label lbPageCount;
 
@@ -81,23 +82,27 @@ public class MainScreenController implements Initializable{
     @FXML 
     private Label lbRelation;
 
+    //Sắp xếp dữ liệu theo thứ tự tăng dần
     @FXML
     void sortData(ActionEvent event) {
         SortingCollection.sort(filterList);
     }
 
+    //Lưu dữ liệu vào các file
     @FXML
     void saveData(ActionEvent event) {
         dataHandler.saveData();
         JOptionPane.showMessageDialog(null, "Data saved");
     }
 
+    //Chuyển màn hình sang dữ liệu được lấy từ các file
     @FXML 
     void viewDataFromFile(ActionEvent event) {
         dataHandler.useImportedData();
         setDataList();
     }
 
+    //Chuyển màn hình sang các dữ liệu lấy từ web
     @FXML
     void viewDataFromWeb(ActionEvent event) {
         dataHandler.useCrawledData();
@@ -117,6 +122,7 @@ public class MainScreenController implements Initializable{
         crawlWindow.setVisible(false);
     }
 
+    //Lấy dữ liệu từ file
     @FXML
     void importDataFromFile(ActionEvent event) {
         boxMain.setVisible(false);
@@ -138,11 +144,13 @@ public class MainScreenController implements Initializable{
         thread.start();
     }
 
+    //Thu thập dữ liệu từ web
     @FXML
     void crawlDataFromWeb(ActionEvent event) {
         crawlWindow.setVisible(true);
     }
 
+    // Show dữ liệu theo thể loại
     @FXML
     void showAllData(ActionEvent event) {
         mbType.setText("Tất cả");
@@ -179,12 +187,17 @@ public class MainScreenController implements Initializable{
         setDataList();
     }
 
+    //Xử lý chương trình
     private ObservableList<Historical> filterList;
     private DataHandler dataHandler;
     private Task<Void> crawlingTask;
     private Task<Void> importTask;
     private Thread crawlingThread;
     private Thread importThread;
+
+    public DataHandler getDataHandler() {
+        return dataHandler;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -271,6 +284,7 @@ public class MainScreenController implements Initializable{
 
     }
 
+    //Thay đổi nội dung của GUI mỗi khi chọn 1 item khác trong list view
     private void setContent(Historical obj) {
         if(obj != null) {
             lbName.setText(obj.getName());
@@ -300,6 +314,7 @@ public class MainScreenController implements Initializable{
         
     }
 
+    //Thay đỏi dataset của listview khi có sự kiện được cập nhật
     private void setDataList() {
         try {
             if(mbType.getText().equals("Tất cả")) {
@@ -329,6 +344,7 @@ public class MainScreenController implements Initializable{
         }
     }
 
+    //Thay đổi dataset của listview khi phần tìm kiếm được cập nhật
     private void searchData(String searchKey) {
         searchKey = StringHandler.normalize(searchKey);
         int i = 0;
@@ -343,10 +359,7 @@ public class MainScreenController implements Initializable{
         lbPageCount.setText("" + filterList.size());
     }
 
-    public DataHandler getDataHandler() {
-        return dataHandler;
-    }
-
+    //Tạo ra các nút liên kết đến thực thể
     Button createRelativeLink(Historical data){
         Button btn = new Button();
         btn.setText("+ " + data.getName());
@@ -359,5 +372,4 @@ public class MainScreenController implements Initializable{
         });
         return btn;
     }
-
 }

@@ -1,6 +1,6 @@
 package entity;
 
-public class Location extends Historical{
+public class Location extends Historical implements CloneAndDisplay<Historical>{
     private String location;
     private String category;
     public String getLocation() {
@@ -15,6 +15,7 @@ public class Location extends Historical{
         this.category = category;
     }
 
+    @Override
     public String toString() {
         StringBuilder info = new StringBuilder(" - Vị trí: ");
         info.append(location);
@@ -25,6 +26,7 @@ public class Location extends Historical{
         return info.toString();
     }
 
+    @Override
     public Location clone() {
         Location clone = new Location(super.getName(), super.getSource(), location, category);
         clone.setDetail(super.getDetail());
