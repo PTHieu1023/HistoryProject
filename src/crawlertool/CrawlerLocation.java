@@ -9,13 +9,13 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import entity.Historical;
+import entity.Location;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
-import objectclass.Historical;
-import objectclass.Location;
 import othertools.StringHandler;
 
-public class CrawlerLocation {
+public class CrawlerLocation implements Crawlable{
 
     private List<Location> locations;
     private ObservableList<Historical> dataList;
@@ -44,6 +44,7 @@ public class CrawlerLocation {
         return detail.replaceAll("\\[.*?\\]", "");
     }
 
+    @Override
     public void crawlData() {
         String url = "https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_Di_t%C3%ADch_qu%E1%BB%91c_gia_Vi%E1%BB%87t_Nam";
         String name;

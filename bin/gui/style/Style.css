@@ -25,6 +25,7 @@
     -fx-padding: 0;
     -fx-viewport-border: none;
     -fx-effect: none;
+    -fx-focus-color: transparent;
 }
 
 .list-view .scroll-bar:horizontal {

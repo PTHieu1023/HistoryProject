@@ -1,4 +1,4 @@
-package objectclass;
+package entity;
 
 public class War extends Historical{
     private String occurTime;
@@ -20,6 +20,15 @@ public class War extends Historical{
         this.result = result;
     }
 
+    public void setOccurTime(String occurTime) {
+        this.occurTime = occurTime;
+    }
+    public void setPlace(String place) {
+        this.place = place;
+    }
+    public void setResult(String result) {
+        this.result = result;
+    }
     public String toString() {
         StringBuilder info = new StringBuilder("- Thời gian: ");
         info.append(occurTime);

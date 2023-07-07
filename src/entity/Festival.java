@@ -1,10 +1,16 @@
-package objectclass;
+package entity;
 
 public class Festival extends Historical {
     private String location;
     private String occurTime;
     public String getLocation() {
         return location;
+    }
+    public void setLocation(String location) {
+        this.location = location;
+    }
+    public void setOccurTime(String occurTime) {
+        this.occurTime = occurTime;
     }
     public String getOccurTime() {
         return occurTime;

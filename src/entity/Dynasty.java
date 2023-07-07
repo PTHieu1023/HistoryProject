@@ -1,4 +1,4 @@
-package objectclass;
+package entity;
 
 public class Dynasty extends Historical{
     private String timeline;
@@ -11,6 +11,10 @@ public class Dynasty extends Historical{
     public String getTimeline() {
         return timeline;
     }   
+
+    public void setTimeline(String timeline) {
+        this.timeline = timeline;
+    }
 
     public String toString() {
         StringBuilder info = new StringBuilder(" - Thời gian: ");

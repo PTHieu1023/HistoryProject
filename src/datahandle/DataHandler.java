@@ -13,14 +13,14 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import entity.Dynasty;
+import entity.Festival;
+import entity.Figure;
+import entity.Historical;
+import entity.Location;
+import entity.War;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import objectclass.Dynasty;
-import objectclass.Festival;
-import objectclass.Figure;
-import objectclass.Historical;
-import objectclass.Location;
-import objectclass.War;
 
 public class DataHandler {
     private ObservableList<Historical> dataList;

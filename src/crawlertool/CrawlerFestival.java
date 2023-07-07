@@ -9,13 +9,13 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import entity.Festival;
+import entity.Historical;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
-import objectclass.Festival;
-import objectclass.Historical;
 import othertools.StringHandler;
 
-public class CrawlerFestival {
+public class CrawlerFestival implements Crawlable{
     private List<Festival> festivals;
     private ObservableList<Historical> dataList;
 
@@ -30,6 +30,7 @@ public class CrawlerFestival {
 
     private Document doc = new Document("UTF-8");
 
+    @Override
     public void crawlData() {
         String name;
         String location;

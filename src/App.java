@@ -19,29 +19,29 @@ public class App extends Application{
         primaryStage.setTitle("Lịch sử Việt Nam");
 
          primaryStage.setOnCloseRequest(event -> {
-             event.consume();
+            event.consume();
 
-             Alert alert = new Alert(AlertType.CONFIRMATION);
-             alert.setTitle("Notice");
-             alert.setHeaderText("Do you want to save data before exit?");
+            Alert alert = new Alert(AlertType.CONFIRMATION);
+            alert.setTitle("Notice");
+            alert.setHeaderText("Do you want to save data before exit?");
 
-             ButtonType buttonTypeYes = new ButtonType("Yes");
-             ButtonType buttonTypeNo = new ButtonType("No");
-             ButtonType buttonTypeCancel = new ButtonType("Cancel");
+            ButtonType buttonTypeYes = new ButtonType("Yes");
+            ButtonType buttonTypeNo = new ButtonType("No");
+            ButtonType buttonTypeCancel = new ButtonType("Cancel");
 
-             alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeNo, buttonTypeCancel);
+            alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeNo, buttonTypeCancel);
 
-             alert.showAndWait().ifPresent(buttonType -> {
-                 if (buttonType == buttonTypeYes) {
-                     controller.getDataHandler().saveData();
-                     primaryStage.close();
-                     Platform.exit();
-                 } else if (buttonType == buttonTypeNo) {
-                     primaryStage.close();
-                     Platform.exit();
-                 }
-             });
-         });
+            alert.showAndWait().ifPresent(buttonType -> {
+                if (buttonType == buttonTypeYes) {
+                    controller.getDataHandler().saveData();
+                    primaryStage.close();
+                    Platform.exit();
+                } else if (buttonType == buttonTypeNo) {
+                    primaryStage.close();
+                    Platform.exit();
+                }
+            });
+    });
 
         ScreenScene mainScene = new ScreenScene();
         mainScene.getMainSceneLoader().setController(controller);

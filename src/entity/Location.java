@@ -1,4 +1,4 @@
-package objectclass;
+package entity;
 
 public class Location extends Historical{
     private String location;

@@ -1,4 +1,4 @@
-package objectclass;
+package entity;
 
 public class Figure extends Historical{
     private String birth;
@@ -14,10 +14,19 @@ public class Figure extends Historical{
         return birth;
     }
 
+    public void setBirth(String birth) {
+        this.birth = birth;
+    }
+
+    public void setDeath(String death) {
+        this.death = death;
+    }
+
     public String getDeath() {
         return death;
     }  
 
+    //Nội dung hiển thị trên GUI
     public String toString() {
         StringBuilder info = new StringBuilder(" - Sinh: ");
         info.append(birth);
@@ -28,6 +37,7 @@ public class Figure extends Historical{
         return info.toString();
     }
 
+    //Clone 1 object không relative = null để lưu vào file json
     public Figure clone() {
         Figure clone = new Figure(super.getName(), super.getSource(), birth, death);
         clone.setDetail(super.getDetail());

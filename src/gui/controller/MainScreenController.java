@@ -5,9 +5,10 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
-import objectclass.*;
+import othertools.SortingCollection;
 import othertools.StringHandler;
 import datahandle.DataHandler;
+import entity.*;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -82,7 +83,7 @@ public class MainScreenController implements Initializable{
 
     @FXML
     void sortData(ActionEvent event) {
-
+        SortingCollection.sort(filterList);
     }
 
     @FXML
@@ -287,6 +288,7 @@ public class MainScreenController implements Initializable{
                 lbType.setText("Tư liệu Lịch sử");
             }
             boxLink.getChildren().clear();
+            lbRelation.setVisible(false);
             txDetail.setText(obj.toString());
             if(obj.getRelative() != null) {
                 lbRelation.setVisible(true);

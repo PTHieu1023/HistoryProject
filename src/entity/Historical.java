@@ -1,4 +1,4 @@
-package objectclass;
+package entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,6 +72,12 @@ public class Historical {
         return false;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setSource(String source) {
+        this.source = source;
+    }
     public void setRelation(Historical b) {
         if(relativeKeyWord == null)
             relativeKeyWord = StringHandler.normalize(name + detail);

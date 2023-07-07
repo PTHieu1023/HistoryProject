@@ -8,14 +8,14 @@ import crawlertool.CrawlerFestival;
 import crawlertool.CrawlerFigure;
 import crawlertool.CrawlerLocation;
 import crawlertool.CrawlerWar;
+import entity.Dynasty;
+import entity.Festival;
+import entity.Figure;
+import entity.Historical;
+import entity.Location;
+import entity.War;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import objectclass.Dynasty;
-import objectclass.Festival;
-import objectclass.Figure;
-import objectclass.Historical;
-import objectclass.Location;
-import objectclass.War;
 
 public class Crawler {
     private ObservableList<Historical> dataList = FXCollections.observableArrayList();
@@ -84,10 +84,10 @@ public class Crawler {
 
     public void crawlDataFromWeb() {
         dataList.clear();        
-        crawlerWar();
-        crawlerFestival();
-        crawlDynasty();
-        crawlerLocation();
+        //crawlerWar();
+        //crawlerFestival();
+        //crawlDynasty();
+        //crawlerLocation();
         crawlerFigure();
         int size = dataList.size();
         for(int i = 0; i<size-1; i++)

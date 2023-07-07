@@ -9,13 +9,13 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import entity.Historical;
+import entity.War;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
-import objectclass.Historical;
-import objectclass.War;
 import othertools.StringHandler;
 
-public class CrawlerWar {
+public class CrawlerWar implements Crawlable{
     
     private List<War> wars;
     private ObservableList<Historical> dataList;
@@ -30,6 +30,7 @@ public class CrawlerWar {
         this.wars = wars;
     }
 
+    @Override
     public void crawlData() {
         String name;
         String place;

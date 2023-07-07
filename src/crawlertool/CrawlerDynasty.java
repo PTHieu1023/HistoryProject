@@ -9,13 +9,13 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import entity.Dynasty;
+import entity.Historical;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
-import objectclass.Dynasty;
-import objectclass.Historical;
 import othertools.StringHandler;
 
-public class CrawlerDynasty {
+public class CrawlerDynasty implements Crawlable{
     private Document doc = new Document("UTF-8");
     private List<Dynasty> dynasties;
     private ObservableList<Historical> dataList;
@@ -28,7 +28,8 @@ public class CrawlerDynasty {
         this.dynasties = dynasties;
     }
 
-    public void crawlData(){
+    @Override
+    public void crawlData() {
         String url  = "https://vi.wikipedia.org/wiki/Vua_Vi%E1%BB%87t_Nam#";
         try {
             doc = Jsoup.connect(url).get();
@@ -95,6 +96,5 @@ public class CrawlerDynasty {
         }
         return keyword.toString();
     }
-
 
 }
