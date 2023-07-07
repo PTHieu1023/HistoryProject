@@ -119,6 +119,7 @@ public class Importer {
     }
 
     public void importData() {
+        dataList.clear();
         importDynasties();
         importWars();
         importFigures();
