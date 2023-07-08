@@ -51,7 +51,7 @@ public class CrawlerFigure implements Crawlable{
             try{
                 doc = Jsoup.connect(source).get();
                 name = doc.select("#content > div.com-content-article.item-page.page-list-items .page-header > h2").first().text();
-                if(!doc.select("div.infobox").isEmpty() && isFigure(doc) && !name.contains("nhà")){
+                if(!doc.select("div.infobox").isEmpty() && isFigure(doc) && !name.toLowerCase().contains("nhà")){
                     birth = "?";
                     death = "?";
                     for(Element tr: doc.select("div.infobox > table > tbody tr")) {
@@ -65,7 +65,7 @@ public class CrawlerFigure implements Crawlable{
                     detail = detail.replaceAll("\\[.*?\\]", "");
                     Figure figure = new Figure(name, source, birth, death);
                     figure.setDetail(detail);
-                    figure.setRelativeKeyWord(StringHandler.normalize(name+birth+death+detail));
+                    figure.setRelativeKeyWord(StringHandler.normalize(name + detail));
                     addToList(figure);
                 }
             } catch (IOException e) {
@@ -111,9 +111,9 @@ public class CrawlerFigure implements Crawlable{
                     relativeKeyWord = StringHandler.normalize(name + detail);
                     
                     for(Element info : detaiDoc.select("#mw-content-text > div.mw-parser-output > table.infobox tr")) {
-                        if(info.select("th").text().equals("Sinh"))
+                        if(info.select("th").text().toLowerCase().equals("sinh"))
                             birth = info.select("td").text().replaceAll("\\[.*?\\]", "");
-                        else if(info.select("th").text().equals("Mất")) 
+                        else if(info.select("th").text().toLowerCase().equals("Mất")) 
                             death = info.select("td").text().replaceAll("\\[.*?\\]", "");
                     }
 

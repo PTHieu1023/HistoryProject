@@ -51,7 +51,7 @@ public class CrawlerDynasty implements Crawlable{
                 kings = getRelativeLink(tr.select("td").first());
                 Dynasty dynasty = new Dynasty(name, source, timeline);
                 detail = detail.replaceAll("\\[.*?\\]", "");
-                dynasty.setRelativeKeyWord(StringHandler.normalize(kings + name + timeline + detail));
+                dynasty.setRelativeKeyWord(StringHandler.normalize(kings + detail));
                 dynasty.setDetail(detail);
                 dynasties.add(dynasty);
                 Platform.runLater(() -> {

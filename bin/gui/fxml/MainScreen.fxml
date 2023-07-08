@@ -2,6 +2,7 @@
 
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -183,62 +184,75 @@
                   </VBox>
                </left>
                <center>
-                  <ScrollPane hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../style/Style.css" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="495.0" prefWidth="740.0" style="-fx-border-width: 5px; -fx-border-radius: 10px; -fx-background-radius: 20;" BorderPane.alignment="TOP_CENTER">
                      <BorderPane.margin>
                         <Insets bottom="30.0" right="30.0" />
                      </BorderPane.margin>
-                     <content>
-                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="485.0" prefWidth="730.0" style="-fx-background-radius: 2px;" styleClass="light-bg" stylesheets="@../style/Style.css">
-                           <children>
-                              <VBox layoutX="-8.0" layoutY="-3.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="590.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="lbName" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial Bold" size="35.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="4.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="lbType" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial Italic" size="25.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-radius: 10px;" vbarPolicy="NEVER">
+                           <content>
+                              <AnchorPane cache="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="710.0" style="-fx-border-radius: 10px;" styleClass="light-bg" stylesheets="@../style/Style.css">
                                  <children>
-                                    <Label fx:id="lbName" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Welcome" textAlignment="CENTER" wrapText="true">
-                                       <font>
-                                          <Font name="Arial Bold" size="40.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets top="4.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <Label fx:id="lbType" alignment="CENTER" layoutX="10.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Tư liệu lịch sử" textAlignment="CENTER" wrapText="true">
-                                       <font>
-                                          <Font name="Arial Italic" size="28.0" />
-                                       </font>
-                                    </Label>
-                                    <Text fx:id="txDetail" lineSpacing="1.5" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="700.0">
-                                       <font>
-                                          <Font name="Serif Regular" size="24.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </Text>
-                                    <Label fx:id="lbRelation" contentDisplay="CENTER" ellipsisString="" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Liên quan" underline="true" visible="false">
-                                       <font>
-                                          <Font name="Segoe UI Bold Italic" size="24.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <VBox fx:id="boxLink">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" />
-                                       </VBox.margin>
+                                    <VBox layoutX="-8.0" layoutY="-3.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" style="-fx-background-radius: 10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Text fx:id="txDetail" lineSpacing="1.5" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="655.0">
+                                             <font>
+                                                <Font name="Serif Regular" size="22.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Label fx:id="lbRelation" contentDisplay="CENTER" ellipsisString="" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Liên quan" underline="true" visible="false">
+                                             <font>
+                                                <Font name="Segoe UI Bold Italic" size="24.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <VBox fx:id="boxLink">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                       </children>
                                     </VBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
                                  <padding>
-                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                     </content>
+                              </AnchorPane>
+                           </content>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ScrollPane>
+                     </children>
                      <styleClass>
-                        <String fx:value="data-list-view" />
+                        <String fx:value="light-bg" />
                         <String fx:value="brown-border" />
                      </styleClass>
-                  </ScrollPane>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
                </center>
             </BorderPane>
          </children>

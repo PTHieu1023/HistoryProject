@@ -57,7 +57,8 @@ public class Historical {
     public void setRelation(Historical b) {
         if(relativeKeyWord == null)
             relativeKeyWord = StringHandler.normalize(name + detail);
-        if(relativeKeyWord.contains(StringHandler.normalize(b.getName()))) {
+        String key = StringHandler.normalize(b.getName());
+        if(relativeKeyWord.contains(key) || b.getRelativeKeyWord().contains(StringHandler.normalize(name))) {
             addRelation(b);
             b.addRelation(this);
         }

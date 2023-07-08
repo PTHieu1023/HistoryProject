@@ -1,19 +1,13 @@
 package othertools;
-import java.text.Normalizer;
-import java.util.regex.Pattern;
 
 public class StringHandler {
 
-    private static final String ALPHABET = " AÁÀẢÃẠaáàảãạĂẮẰẲẴẶăắằẳẵặÂẤẦẨẪẬâấầẩẫậBbCcDdĐđEÉÈẺẼẸeéèẻẽẹÊẾỀỂỄỆêếềểễệFfGgHhIÍÌỈĨỊiíìỉĩịJjKkLlMmNnOÓÒỎÕỌoóòỏõọÔỐỒỔỖỘôốồổỗộƠỚỜỞỠỢơớờởỡợPpQqRrSsTtUÚÙỦŨỤuúùủũụƯỨỪỬỮỰưứừửữựVvWwXxYyZz0123456789+-*/!#$%^&()[]{}`~<>.,;:'\"\\?";
+    private static final String ALPHABET = " AÁÀẢÃẠaáàảãạĂẮẰẲẴẶăắằẳẵặÂẤẦẨẪẬâấầẩẫậBbCcDdĐđEÉÈẺẼẸeéèẻẽẹÊẾỀỂỄỆêếềểễệFfGgHhIÍÌỈĨỊiíìỉĩịJjKkLlMmNnOÓÒỎÕỌoóòỏõọÔỐỒỔỖỘôốồổỗộƠỚỜỞỠỢơớờởỡợPpQqRrSsTtUÚÙỦŨỤuúùủũụƯỨỪỬỮỰưứừửữựVvWwXxYÝỲỶỸỴyýỳỷỹỵZz0123456789+-*/!#$%^&()[]{}`~<>.,;:'\"\\?";
 
     //Chuyển xâu unicode về chuỗi kí tự latin và liên tục
     public static String normalize(String text) {
         String convertedText = text.toLowerCase();
-        convertedText = convertedText.replaceAll("đ", "d");
-        convertedText = Normalizer.normalize(convertedText, Normalizer.Form.NFD);
-        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
-        convertedText = pattern.matcher(convertedText).replaceAll("");
-        convertedText = convertedText.replaceAll("[^a-z0-9]", "");
+        convertedText = convertedText.replaceAll("[^AÁÀẢÃẠaáàảãạĂẮẰẲẴẶăắằẳẵặÂẤẦẨẪẬâấầẩẫậBbCcDdĐđEÉÈẺẼẸeéèẻẽẹÊẾỀỂỄỆêếềểễệFfGgHhIÍÌỈĨỊiíìỉĩịJjKkLlMmNnOÓÒỎÕỌoóòỏõọÔỐỒỔỖỘôốồổỗộƠỚỜỞỠỢơớờởỡợPpQqRrSsTtUÚÙỦŨỤuúùủũụƯỨỪỬỮỰưứừửữựVvWwXxYyZz0123456789 ]", "");
         return convertedText;
     }
 
@@ -30,4 +24,5 @@ public class StringHandler {
             return -1; 
         return 0;
     }
+    
 }

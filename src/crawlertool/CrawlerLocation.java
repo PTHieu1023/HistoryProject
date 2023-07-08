@@ -81,7 +81,7 @@ public class CrawlerLocation implements Crawlable{
                         source.setLength(0);
                     Location location = new Location(name, source.toString(), position, category);
                     location.setDetail(detail.toString().replaceAll("\\[.*?\\]", ""));
-                    location.setRelativeKeyWord(StringHandler.normalize(name + position + category + detail));
+                    location.setRelativeKeyWord(StringHandler.normalize(name + detail));
                     locations.add(location);
 
                     Platform.runLater(() -> {

@@ -125,11 +125,6 @@ public class Importer {
         importFigures();
         importLocations();
         importFestivals();
-        //Link data
-        int size = dataList.size();
-        for(int i = 0; i<size-1; i++)
-            for(int j = i+1; j < size; j++)
-                dataList.get(i).setRelation(dataList.get(j));
     }
 
     private String readJsonFile(String path) {

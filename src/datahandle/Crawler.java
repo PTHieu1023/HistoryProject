@@ -57,12 +57,6 @@ public class Crawler {
         crawlDynasty();
         crawlerLocation();
         crawlerFigure();
-
-        //Link data
-        int size = dataList.size();
-        for(int i = 0; i<size-1; i++)
-            for(int j = i+1; j < size; j++)
-                dataList.get(i).setRelation(dataList.get(j));
     }
 
     private void crawlDynasty() {

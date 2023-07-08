@@ -68,7 +68,7 @@ public class CrawlerFestival implements Crawlable{
                     }
 
                     Festival festival = new Festival(name, url, location, occurTime);
-                    festival.setRelativeKeyWord(StringHandler.normalize(name + url + location + occurTime + detail));
+                    festival.setRelativeKeyWord(StringHandler.normalize(name + location + detail));
                     festival.setDetail(detail.toString());
                     festivals.add(festival);
                     Platform.runLater(() -> {

@@ -304,6 +304,10 @@ public class MainScreenController implements Initializable{
             boxLink.getChildren().clear();
             lbRelation.setVisible(false);
             txDetail.setText(obj.toString());
+            for(Historical ultity : dataHandler.getDataList()) {
+                if(!obj.equals(ultity))
+                    obj.setRelation(ultity);
+            }
             if(obj.getRelative() != null) {
                 lbRelation.setVisible(true);
                 for(Historical link : obj.getRelative()) {
