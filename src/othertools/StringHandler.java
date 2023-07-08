@@ -7,6 +7,7 @@ public class StringHandler {
     //Chuyển xâu unicode về chuỗi kí tự latin và liên tục
     public static String normalize(String text) {
         String convertedText = text.toLowerCase();
+        convertedText = convertedText.replaceAll("  ", " ");
         convertedText = convertedText.replaceAll("[^AÁÀẢÃẠaáàảãạĂẮẰẲẴẶăắằẳẵặÂẤẦẨẪẬâấầẩẫậBbCcDdĐđEÉÈẺẼẸeéèẻẽẹÊẾỀỂỄỆêếềểễệFfGgHhIÍÌỈĨỊiíìỉĩịJjKkLlMmNnOÓÒỎÕỌoóòỏõọÔỐỒỔỖỘôốồổỗộƠỚỜỞỠỢơớờởỡợPpQqRrSsTtUÚÙỦŨỤuúùủũụƯỨỪỬỮỰưứừửữựVvWwXxYyZz0123456789 ]", "");
         return convertedText;
     }

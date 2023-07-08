@@ -68,4 +68,11 @@
     -fx-text-fill: red;
     -fx-underline: true;
 }
-  
+
+.menu-bar{
+    -fx-background-color: #820000;
+}
+
+.menu-bar > .container > .menu > .label {
+    -fx-text-fill: white;
+}

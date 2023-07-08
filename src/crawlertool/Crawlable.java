@@ -1,5 +1,5 @@
 package crawlertool;
 
 public interface Crawlable {
-    public void crawlData();
+     void crawlData();
 }
