@@ -202,8 +202,6 @@ public class MainScreenController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        boxMain.setVisible(false);
-        filterList = FXCollections.observableArrayList();
         importTask = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
@@ -218,9 +216,23 @@ public class MainScreenController implements Initializable{
                 return null;
             }
         };
-
         importThread = new Thread(importTask);
         importThread.setDaemon(true);
+
+        crawlingTask = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                dataHandler.getCrawler().crawlDataFromWeb();  
+                Platform.runLater(()-> {
+                    crawlWindow.setVisible(true);
+                    animCrawling.setVisible(false);
+                    lbCrawlUpdate.setText("Crawl Completed!");
+                });
+                return null; 
+            }
+        };
+        crawlingThread = new Thread(crawlingTask);
+        crawlingThread.setDaemon(true);
 
         listviewCrawledData.setCellFactory(param -> new ListCell<Historical>() {
             @Override
@@ -248,27 +260,10 @@ public class MainScreenController implements Initializable{
             }
         });
 
-        listviewData.setItems(filterList);
-
         listviewData.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             setContent(newValue);
             lbPageCount.setText((filterList.indexOf(newValue)+1) + "/" + filterList.size());
         });
-
-        crawlingTask = new Task<Void>() {
-            @Override
-            protected Void call() throws Exception {
-                dataHandler.getCrawler().crawlDataFromWeb();  
-                Platform.runLater(()-> {
-                    crawlWindow.setVisible(true);
-                    animCrawling.setVisible(false);
-                    lbCrawlUpdate.setText("Crawl Completed!");
-                });
-                return null; 
-            }
-        };
-        crawlingThread = new Thread(crawlingTask);
-        crawlingThread.setDaemon(true);
 
         tfSearchBar.textProperty().addListener(new ChangeListener<String>() {
 
@@ -280,6 +275,10 @@ public class MainScreenController implements Initializable{
             
         });
     
+        boxMain.setVisible(false);
+        filterList = FXCollections.observableArrayList();
+        listviewData.setItems(filterList);
+
         importThread.start();
 
     }
