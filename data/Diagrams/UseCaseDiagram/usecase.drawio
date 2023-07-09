@@ -1,0 +1,90 @@
+<mxfile host="65bd71144e">
+    <diagram id="1S9MVGuIxUxBA9d7-PjY" name="Page-1">
+        <mxGraphModel dx="798" dy="568" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="13" style="edgeStyle=none;html=1;" parent="1" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="370" y="250" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#000000;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="380" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="285" y="170" width="330" height="570" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Crawl data from internet" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="210" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="View crawled data via GUI" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="300" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Save crawled data to file" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="390" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="View data from file" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="490" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Sort viewing data" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="590" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="2" target="7" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="170" y="310" as="sourcePoint"/>
+                        <mxPoint x="440" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" parent="1" source="2" target="10" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="170" y="308" as="sourcePoint"/>
+                        <mxPoint x="380.72" y="426" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="2" target="9" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="170" y="310" as="sourcePoint"/>
+                        <mxPoint x="378.930818676801" y="277.3719674263997" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" parent="1" source="2" target="11" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="170" y="310" as="sourcePoint"/>
+                        <mxPoint x="390.72" y="436" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="endArrow=classic;html=1;entryX=0.004;entryY=0.377;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;strokeColor=#000000;" parent="1" source="2" target="12" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="160" y="410" as="sourcePoint"/>
+                        <mxPoint x="380" y="540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="150" y="400.05" as="sourcePoint"/>
+                        <mxPoint x="390.2072545053072" y="279.9463727473464" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="150" y="400.05" as="sourcePoint"/>
+                        <mxPoint x="367.92706453424034" y="356.4645870931518" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="Crawl data from internet" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="210" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="View crawled data via GUI" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="300" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Save crawled data to file" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="390" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="View data from file" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="490" width="180" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
