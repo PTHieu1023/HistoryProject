@@ -112,9 +112,9 @@ public class CrawlerFigure implements Crawlable{
                     
                     for(Element info : detaiDoc.select("#mw-content-text > div.mw-parser-output > table.infobox tr")) {
                         if(info.select("th").text().toLowerCase().equals("sinh"))
-                            birth = info.select("td").text().replaceAll("\\[.*?\\]", "");
+                            birth = info.select("td").text().replaceAll("\\[.*\\]", "");
                         else if(info.select("th").text().toLowerCase().equals("Mất")) 
-                            death = info.select("td").text().replaceAll("\\[.*?\\]", "");
+                            death = info.select("td").text().replaceAll("\\[.*\\]", "");
                     }
 
                     Figure figure = new Figure(name, source, birth, death);

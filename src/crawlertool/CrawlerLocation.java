@@ -80,7 +80,7 @@ public class CrawlerLocation implements Crawlable{
                     else    
                         source.setLength(0);
                     Location location = new Location(name, source.toString(), position, category);
-                    location.setDetail(detail.toString().replaceAll("\\[.*?\\]", ""));
+                    location.setDetail(detail.toString().replaceAll("\\[.*\\]", ""));
                     location.setRelativeKeyWord(StringHandler.normalize(name + detail));
                     locations.add(location);
 
@@ -104,7 +104,7 @@ public class CrawlerLocation implements Crawlable{
         } catch (NullPointerException e) {
             detail = "";
         }
-        return detail.replaceAll("\\[.*?\\]", "");
+        return detail.replaceAll("\\[.*\\]", "");
     }
 
 }
